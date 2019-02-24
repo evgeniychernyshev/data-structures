@@ -38,3 +38,26 @@ def negative_count(scores):
 
     return negative
 
+def letters(name):
+    """
+    >>> letters('Василий Иванович')
+    'ВИ'
+
+    >>> letters('Василий')
+    'В'
+
+    >>> letters('Василий Алибабаевич Петров')
+    'ВА'
+
+    >>> letters('crazy girl')
+    'CG'
+
+    >>> letters('crazy   girl')
+    'CG'
+    """
+    parts = name.split(' ', 1)
+    result = ''
+    for part in parts:
+        result += part.strip()[0]
+    return result.upper()
+
